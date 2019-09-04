@@ -1,3 +1,5 @@
+import random
+
 def replacment(list,n):
     if n in list:
         index = list.index(n)
@@ -72,18 +74,18 @@ def check_3x3_box(sudoku, row_no, col_no, value):
     elif flag == 1:
         return False
 ##############################################################################################################################
-list1 = [i for i in range(1,10)]
-import random
-random.shuffle(list1)
-list2 = shifting(list1,3)
-list3 = shifting(list2,3)
-list4 = shifting(list3,1)
-list5 = shifting(list4,3)
-list6 = shifting(list5,3)
-list7 = shifting(list6,1)
-list8 = shifting(list7,3)
-list9 = shifting(list8,3)
-sudoku = [list1,list2,list3,list4,list5,list6,list7,list8,list9]
+row1 = [i for i in range(1,10)]
+
+random.shuffle(row1)
+row2 = shifting(row1,3)
+row3 = shifting(row2,3)
+row4 = shifting(row3,1)
+row5 = shifting(row4,3)
+row6 = shifting(row5,3)
+row7 = shifting(row6,1)
+row8 = shifting(row7,3)
+row9 = shifting(row8,3)
+sudoku = [row1,row2,row3,row4,row5,row6,row7,row8,row9]
 level = input('DIFFCULTY LEVEL \n1) HARD\n2) MEDIUM\n3) EASY\n' )
 if level == '1':
     remove_number = [7,8,9]
