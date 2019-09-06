@@ -1,2 +1,2 @@
 # Puzzle
-sudoku generator and solver and ////black jack  game
+### sudoku generator and solver and black jack  game
