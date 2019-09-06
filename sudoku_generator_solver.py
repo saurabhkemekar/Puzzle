@@ -16,11 +16,10 @@ def solving_sudoku(sudoku):
     #print('row {},col{}'.format(row,col))
     if row==-1 and col==-1:
         for rowx in sudoku:
-
             print(rowx)
         print("\n\n")
-        return True
-
+        exit()
+        
     else:
         option = [i for i in range(1, 10)]
 
