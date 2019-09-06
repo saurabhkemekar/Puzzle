@@ -1,16 +1,13 @@
 import random
-
-def replacment(list,n):
-    if n in list:
-        index = list.index(n)
-        list[index] = 0
-    return  list
+# for shifhting the number by n digit to left
 def shifting(listx,n):
     listx1 = [listx[i] for i in range(n,9)]
     listx2 = [listx[i] for i in range(0,n)]
     return listx1+listx2
-def solving_sudoku(sudoku):
 
+# this function find the solution of sudoku using backtrackking algorithm
+
+def solving_sudoku(sudoku):
     flag = 0
     row, col = first_empty(sudoku)
     #print('row {},col{}'.format(row,col))
@@ -36,21 +33,14 @@ def solving_sudoku(sudoku):
     if flag ==0:
             sudoku[row][col] =0
             return False
-
-
-
-def first_empty(sudoku):
-    for i in range(len(sudoku)):
-        if 0 in sudoku[i]:
-            return i, sudoku[i].index(0)
-    else:
-        return -1,-1
+# checking the row 
 def check_row(row, value):
 
     if value in row:
         return False
     else:
         return True
+# checking the columns    
 def check_col(sudoku, col_no, value):
 
     column = [row[col_no] for row in sudoku]
@@ -58,6 +48,7 @@ def check_col(sudoku, col_no, value):
         return False
     else:
         return True
+# checkinh the 3*3 gird    
 def check_3x3_box(sudoku, row_no, col_no, value):
     a = row_no // 3
     b = col_no // 3
