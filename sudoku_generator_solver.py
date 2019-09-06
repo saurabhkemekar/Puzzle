@@ -5,6 +5,14 @@ def shifting(listx,n):
     listx2 = [listx[i] for i in range(0,n)]
     return listx1+listx2
 
+# for replacing digit
+ def replacment(list,n):
+     if n in list:
+         index = list.index(n)
+         list[index] = 0
+     return  list
+
+
 # this function find the solution of sudoku using backtrackking algorithm
 
 def solving_sudoku(sudoku):
