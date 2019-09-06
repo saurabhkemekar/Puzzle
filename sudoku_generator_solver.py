@@ -1,4 +1,19 @@
 import random
+def print_sudoku(sudoku):
+    count_r = 0
+    for rowx in sudoku:
+        count_r += 1
+        print('|', end="")
+        count_c = 0
+        for number in rowx:
+            count_c += 1
+            print(number, end=" ")
+            if count_c == 3 or count_c == 6:
+                print("|", end='')
+        print("")
+        if count_r == 3 or count_r == 6:
+            print('____________________')
+    print("\n\n")
 # for shifhting the number by n digit to left
 def shifting(listx,n):
     listx1 = [listx[i] for i in range(n,9)]
@@ -20,9 +35,7 @@ def solving_sudoku(sudoku):
     row, col = first_empty(sudoku)
     #print('row {},col{}'.format(row,col))
     if row==-1 and col==-1:
-        for rowx in sudoku:
-            print(rowx)
-        print("\n\n")
+        print_sudoku(sudoku)
         exit()
         
     else:
@@ -99,9 +112,7 @@ for i in sudoku:
         n = random.randint(1,9)
         i = replacment(i,n)
         count+=1
-for row in sudoku:
-    print(row)
-print('\n\n')
+print_sudoku(sudoku)
 
 #sudoku = [[8,6,0,0,0,9,7,0,0],[0,0,1,0,0,0,8,0,6],[7,0,0,0,4,0,0,1,0],[0,0,8,5,0,0,0,0,4],[0,0,4,8,0,7,2,0,0],[9,0,0,0,0,2,5,0,0],[0,1,0,0,8,0,0,0,7],[3,0,5,0,0,0,6,0,0],[0,0,7,9,0,0,0,3,2]]
 solved_sudoku = solving_sudoku(sudoku)
