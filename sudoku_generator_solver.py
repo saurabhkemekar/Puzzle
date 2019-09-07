@@ -27,6 +27,14 @@ def shifting(listx,n):
          list[index] = 0
      return  list
 
+# for finding empty block
+def first_empty(sudoku):
+    for i in range(len(sudoku)):
+        if 0 in sudoku[i]:
+            return i, sudoku[i].index(0)
+    else:
+        return -1,-1
+
 
 # this function find the solution of sudoku using backtrackking algorithm
 
