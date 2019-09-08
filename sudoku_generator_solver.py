@@ -1,4 +1,33 @@
 import random
+
+def  generate_sudoku():
+    row1 = [i for i in range(1,10)]
+    random.shuffle(row1)
+    row2 = shifting(row1,3)
+    row3 = shifting(row2,3)
+    row4 = shifting(row3,1)
+    row5 = shifting(row4,3)
+    row6 = shifting(row5,3)
+    row7 = shifting(row6,1)
+    row8 = shifting(row7,3)
+    row9 = shifting(row8,3)
+    sudoku = [row1,row2,row3,row4,row5,row6,row7,row8,row9]
+    level = input('DIFFCULTY LEVEL \n1) HARD\n2) MEDIUM\n3) EASY\n' )
+    if level == '1':
+        remove_number = [7,8,9]
+    elif level =='2':
+        remove_number = [5,6,7]
+    else:
+        remove_number = [3,4,5]
+    for i in sudoku:
+        num = random.choice(remove_number)
+        count = 0
+        while count<num:
+            n = random.randint(1,9)
+            i = replacment(i,n)
+            count+=1
+    return sudoku
+
 def print_sudoku(sudoku):
     count_r = 0
     for rowx in sudoku:
@@ -34,7 +63,6 @@ def first_empty(sudoku):
             return i, sudoku[i].index(0)
     else:
         return -1,-1
-
 
 # this function find the solution of sudoku using backtrackking algorithm
 
@@ -93,38 +121,9 @@ def check_3x3_box(sudoku, row_no, col_no, value):
     elif flag == 1:
         return False
 ##############################################################################################################################
-row1 = [i for i in range(1,10)]
-
-random.shuffle(row1)
-row2 = shifting(row1,3)
-row3 = shifting(row2,3)
-row4 = shifting(row3,1)
-row5 = shifting(row4,3)
-row6 = shifting(row5,3)
-row7 = shifting(row6,1)
-row8 = shifting(row7,3)
-row9 = shifting(row8,3)
-sudoku = [row1,row2,row3,row4,row5,row6,row7,row8,row9]
-level = input('DIFFCULTY LEVEL \n1) HARD\n2) MEDIUM\n3) EASY\n' )
-if level == '1':
-    remove_number = [7,8,9]
-elif level =='2':
-    remove_number = [5,6,7]
-else:
-    remove_number = [3,4,5]
-
-for i in sudoku:
-    num = random.choice(remove_number)
-    count = 0
-    while count<num:
-        n = random.randint(1,9)
-        i = replacment(i,n)
-        count+=1
+sudoku = generate_sudoku()
 print_sudoku(sudoku)
-
-#sudoku = [[8,6,0,0,0,9,7,0,0],[0,0,1,0,0,0,8,0,6],[7,0,0,0,4,0,0,1,0],[0,0,8,5,0,0,0,0,4],[0,0,4,8,0,7,2,0,0],[9,0,0,0,0,2,5,0,0],[0,1,0,0,8,0,0,0,7],[3,0,5,0,0,0,6,0,0],[0,0,7,9,0,0,0,3,2]]
 solved_sudoku = solving_sudoku(sudoku)
 
-########################################################################################
 
 
