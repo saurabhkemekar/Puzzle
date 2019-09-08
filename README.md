@@ -13,7 +13,7 @@ First of all, the first row is filled with randomly arranged numbers from 1 to 9
 
 ### Result
 
- ##### sudoku generator                                                       Sudoku solver
+ ##### sudoku generator ----------------------> --------------> ---------------> Sudoku solver
 
     |0 0 8 |0 7 2 |6 0 0                                                  |3 9 8 |5 7 2 |6 1 4                                              
     |5 7 0 |0 1 4 |0 0 8                                                  |5 7 2 |6 1 4 |3 9 8 
