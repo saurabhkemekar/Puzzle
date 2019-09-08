@@ -1,5 +1,5 @@
 # Puzzle
-### sudoku generator and solver and black jack  game
+### Sudoku generator and solver and blackjack game
 
 #### Sudoku generator 
 First of all, the first row is filled with randomly arranged numbers from 1 to 9. Then the second row is filled by shifting the first row by 3 blocks. Similarly, the third row is filled by shifting the second row by 3 blocks in the same direction as previous. Thus a 3x3 box contains every number uniquely. The fourth and seventh rows are filled by shifting its previous row by 1 block. Remaining rows are filled by shifting their preceding row by 3 blocks. Thus every row, column, and 3x3 box contains a number only once. Now whole 9x9 sudoku is filled with numbers, hence a solution of is generated. Now we ask the user what should be the difficulty of sudoku. According to the difficulty we delete random numbers from sudoku. Harder the difficulty more numbers get deleted. Here deleted means replaced by zero. Hence sudoku is generated according to difficulty set by the user.
