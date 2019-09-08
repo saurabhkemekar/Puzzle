@@ -26,3 +26,16 @@ First of all, the first row is filled with randomly arranged numbers from 1 to 9
     |0 6 1 |4 0 0 |0 5 0                                                  |1 4 3 |9 8 5 |7 2 6  
     |4 0 0 |0 0 7 |2 0 1                                                  |9 8 5 |7 2 6 |1 4 3  
     |0 0 0 |0 0 1 |4 3 9                                                  |7 2 6 |1 4 3 |9 8 5   
+    
+    
+   
+   
+  ### Black jack
+ 1) For the blackjack game, we store the player's data using a list of dictionaries, with each dictionary storing each player’s name, hands, bets, profits and so on.
+ 2) Then Each player is asked the amount that he would like to bet. Then we choose two cards randomly from a list for each player using the random module. 
+3) The player is then asked to make his move, ie to hit, double down, stand or split. For splitting, we use two recursive function calls(one for each split hand) and for hitting, we use a single recursive function call. After the player has finished his move(either by standing, getting busted or a blackjack), the dealer makes his move according to the rules. 
+4) Then, profits for each hand of each player is calculated and appended to the profit list of each player. Then the player is asked whether he wants to play another game. If he chooses, he can play another round or he could quit the game. If he quits the game, total profit or total loss(whatever may be the case) is displayed for each player. 
+
+
+    
+    
