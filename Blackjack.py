@@ -45,7 +45,7 @@ def move(hand,suit,cards,suits,bet):# Here, hand is a nested list inside a list.
     elif sum_==21 and len(hand)==2:
         print("Blackjack!")
         return hand,suit, bet
-    choice=input("Press H to Hit, S to Stand, D to Double-Down, P to sPlit")
+    choice=input("Press H to Hit, S to Stand, D to Double-Down, P to sPlit\n")
 
     if choice in['H','h']:
         newcard=random.choice(cards)
@@ -121,11 +121,11 @@ def move(hand,suit,cards,suits,bet):# Here, hand is a nested list inside a list.
 ############################################################################
 # # Main driver code
 print("Welcome to the casino! Let's play blackjack!")
-n=int(input("How many players are playing?"))
+n=int(input("How many players are playing?\n"))
 players=[]
 dealerhand=[]
 for i in range(n):
-    name=input("Enter name, Player{}".format(i+1))
+    name=input("Enter name, Player{}\n".format(i+1))
     players.append({"name":name,"hands":[],"suits":[],"bets":[],'profit':[]})
 cards=[1,2,3,4,5,6,7,8,9,10,10,10,10]
 suits=['spades','hearts','diamonds','clubs']
@@ -214,7 +214,7 @@ while choice in "Yy":
                 players[i]['profit'].append(bet * 0)
             print("Profit is-",profit)
     players=wiped_slate(players)
-    choice=input("Do you wish to play another round?Y/n")
+    choice=input("Do you wish to play another round?Y/n\n")
 print("OK then, Let's see the results")
 for i in range(n):                     # total profit calculation
     name=players[i]['name']
