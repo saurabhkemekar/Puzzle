@@ -28,6 +28,8 @@ First of all, the first row is filled with randomly arranged numbers from 1 to 9
     |0 0 0 |0 0 1 |4 3 9                                                  |8 5 7 |2 6 1 |4 3 9   
     
     
+    
+![](sudoku.gif)
    
    
   ### Black jack
@@ -36,6 +38,6 @@ First of all, the first row is filled with randomly arranged numbers from 1 to 9
 3) The player is then asked to make his move, ie to hit, double down, stand or split. For splitting, we use two recursive function calls(one for each split hand) and for hitting, we use a single recursive function call. After the player has finished his move(either by standing, getting busted or a blackjack), the dealer makes his move according to the rules. 
 4) Then, profits for each hand of each player is calculated and appended to the profit list of each player. Then the player is asked whether he wants to play another game. If he chooses, he can play another round or he could quit the game. If he quits the game, total profit or total loss(whatever may be the case) is displayed for each player. 
 
-
+![](blackjack.gif)
     
     
